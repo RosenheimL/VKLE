@@ -4,10 +4,9 @@ scriptbox.left,1481
 shiori.debugnotify,0
 Char.VirtualDesktop,c8139147-4c30-4068-8cdc-80ae78ccf281
 scriptbox.top,627
-Char0.center,369
+Char0.center,1617
 shell,shell\master\
 FirstBoot,booted
-Char1.center,547
+Char1.center,1800
 shell.ischanged.2,1
-DeveloperPalette.visible,1
 __system_written_flag_do_not_remove__,written
