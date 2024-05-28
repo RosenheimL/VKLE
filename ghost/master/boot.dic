@@ -1,0 +1,106 @@
+OnFirstBoot
+{
+	//If you add variables, make sure to initialize them here!
+	//Note - I haven't added anything about username or pronouns here because it's all handled by the SSP prefs
+	stroke = 0
+	LastTalk = ""
+	timeslot
+	
+	"\1\s[10]\0\s[0]Hello"
+}
+
+OnInitialize
+{
+	
+	if reference0 != "reload" //For things you want to reset EXCEPT when just reloading; a convenience for you the dev, basically
+	{
+		LastTalk = ""
+	}
+}
+
+OnBoot
+{
+	
+	
+	_temp = SHIORI3FW.UserBirthday
+	_user_birthday = "%(_temp[1])/%(_temp[2])" //M/D, if you want it D/M you can switch it around
+	_today = "%(month)/%(day)" //Again, switch this around if using D/M
+	
+	"\1\s[10]\0\s[0]"
+	--
+	if _today == _user_birthday
+	{
+		"\0\s[0]It is %(username)'s birthday today.\w8 Happy birthday, %(username).\w8 Developer,\w4 you can add an interesting message here.\w8 It can be as long as you like.\w8 Or, you can remove it entirely."
+	}
+	elseif _today == "1/1" //You can add whatever cool dates you want with more elseifs here
+	{
+		"\0\s[0]It's new year's day.\w8 Happy %(year),\w4 %(username)."
+	}
+	else //Normal boot
+	{
+		
+		 if timeslot == "earlymorning" 
+		 {
+		 "\0\s[0]Mornin... Why Are you up so early?\w8\1\s[10]まだ眠いよ... なんでこんなに早く起きてるの？\e"
+		
+		 "\1\s[10]*She appears to still be asleep?*\w8\0\s[0]Yuuki, Yuuuuki wake up, %(user) is here.\1\s[10]いやぁ眠い...\0~(〒▽〒。)＼heh... Sorry about that. She'll wake up soon\e"
+		 }
+		 elseif timeslot == "morning"
+		 {
+		 "\0\s[0]Good Mornin %(user)!\e"
+		
+		 "\1\s[10]おはよう!\w8\0\s[0]'ohio'?\w8\1\nオハイオないえと...\w4 グッドモーニング！\w8\0\nOh!Ohayou!\w4\1\nうん！\e"
+		 }
+		 elseif timeslot == "lunch"
+		 {
+		 "\0\s[0]Hello! \1\s[10]こんにちは~\e"
+		
+		 "\0\s[0]I wonder what's being served for Lunch today?\1オリバー、お腹空いてる？あたしもお腹空いてきた。\e"
+		 }
+		 elseif timeslot == "afternoon"
+		 {
+		 "\1\s[10]やったー！自由だ！ポケモンいっぱい遊ぶんだ！\0\s[0]Please don't yell...\e"
+		 }
+		 elseif timeslot == "evening"
+		 {
+ 		 "\1\s[15]太陽は沈む！\0\s[5]It looks nice this time of day, doesn’t it?\e"
+		 }
+		 elseif timeslot == "latenight"
+		 {
+		 "\0\s[0]It’s really late right now.\w8\1\s[10]それも暗くなったようです。\w8\0\s[5]it’s dark!\e"
+   	 
+		 "\1\s[10]もう夜だね。\w8徹夜するよ！\w8\0\s[0]Are you sure you won’t just fall asleep after the first hour?\e"
+		 }
+		 else //the last timeslot we haven't done is midnight, which is what's under here.
+		 {
+		 "\0\s[0]it's past my bed time... It's past Your bedtime I bet\e"
+		 }
+	}
+	
+}
+
+OnClose
+{
+	"\0\s[0]Farewell\1\s[10]別れ"
+	"\0\s[0]Goodbye\1\s[10]バイバイ"
+	--
+	"\w8\w8\-" //This is what makes the ghost close (after a short pause), do not remove the \- , and MAKE SURE you don't use a \e before this point or it won't work
+}
+
+timeslot
+{
+	if hour >= 5 && hour <= 8
+	{	"earlymorning"	}
+	elseif hour >= 9 && hour <= 11
+	{	"morning"	}
+	elseif hour >= 12 && hour <= 14
+	{	"lunch"	}
+	elseif hour >= 15 && hour <= 17
+	{	"afternoon"	}
+	elseif hour >= 18 && hour <= 20
+	{	"evening"	}
+	elseif hour >= 21 && hour <= 24
+	{ "latenight"	}
+	else
+	{ "midnight" }
+}

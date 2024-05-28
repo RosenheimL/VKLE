@@ -1,0 +1,33 @@
+charset,UTF-8
+version,1
+option,DisableNoDefineSurfaces
+
+group,Oliver
+{
+0,Normal
+1,Embarrassment
+2,Surprise
+3,Anxiety
+4,Discourage
+5,Smile
+6,Closing Eyes
+7,Anger
+8,Sneer
+9,Embarrassed anger
+25,Confused
+}
+
+group,Yuki
+{
+10,Normal
+11,Embarrassment
+12,Surprise
+13,Anxiety
+//14,Discourage
+15,Smile
+16,Closing Eyes
+17,Anger
+18,Sneer
+19,Embarrassed anger
+35,Confused
+}

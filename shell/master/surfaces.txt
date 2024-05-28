@@ -1,0 +1,141 @@
+descript
+{
+	version,1
+}
+
+//—————————————————————————————— Sakura surfaces ——————————————————————————————
+
+surface0
+{	
+	//Blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,1000,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+	
+	
+	//Talk
+	animation1.interval,talk,3
+	animation1.pattern0,overlay,1100,100,0,0
+	animation1.pattern1,overlay,-1,100,0,0
+}
+
+surface1
+{
+	//Blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,1000,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+	
+	
+	//Talk
+	animation1.interval,talk,3
+	animation1.pattern0,overlay,1100,100,0,0
+	animation1.pattern1,overlay,-1,100,0,0
+}
+
+surface2
+{
+	//Blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,1000,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+}
+
+surface3
+{
+	//Blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,1000,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+}
+
+surface7
+{
+	//Blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,1000,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+}
+
+surface8
+{
+	//Blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,1000,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+}
+
+//Collisions for the sakura. For many shells the collisions will have to be set per-surface because they'll be different, but I didn't want to waste the space here.
+surface.append0-9,25
+{
+	collision,29,2,84,53,head
+}
+
+//—————————————————————————————— Kero surfaces ——————————————————————————————
+
+surface10
+{
+	//Blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,2000,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+	
+	
+	//Talk
+	animation1.interval,talk,3
+	animation1.pattern0,overlay,2100,100,0,0
+	animation1.pattern1,overlay,-1,100,0,0
+}
+
+surface11
+{
+	//Blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,2000,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+	
+	
+	//Talk
+	animation1.interval,talk,3
+	animation1.pattern0,overlay,2100,100,0,0
+	animation1.pattern1,overlay,-1,100,0,0
+}
+
+surface12
+{
+	//Blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,2000,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+}
+
+surface13
+{
+	//Blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,2000,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+}
+
+surface17
+{
+	//Blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,2000,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+}
+
+surface18
+{
+	//Blink
+	animation0.interval,random,4
+	animation0.pattern1,overlay,2000,100,0,0
+	animation0.pattern3,overlay,-1,50,0,0
+}
+
+
+//Collisions for the kero
+surface.append10-19,35
+{
+	collision,46,4,101,55,head
+}

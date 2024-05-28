@@ -1,0 +1,4 @@
+charset,UTF-8
+type,shell
+name,Yuki and Oli
+directory,yuki-oli

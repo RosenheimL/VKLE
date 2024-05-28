@@ -1,0 +1,73 @@
+KeroMenuGreetings : nonoverlap
+{
+	"\1ハロー"
+	"\1やっほー"
+	"\1どうだい？"
+}
+
+//Because there is an all modifier here, you don't need to write -- between menu options
+OnKeroMenu : all
+{
+	"\1\s[10]\b[2]\![set,autoscroll,disable]\_q"
+	if SHIORI3FW.Eventid == "OnMouseDoubleClick"; KeroMenuGreetings //The check here is so they won't comment if you click the back button. Remove if you prefer
+	
+	"\n\n\_q"
+	
+	"\![*]\q[どうだい？,OnAiTalk]\n"
+	if LastTalk != ""; "\![*]\q[さっき何言ってた？,OnLastTalk]\n"
+
+	"\![*]\q[あなたはボーカロイドですか？何を歌いましたか？,OnYukiMusic]\n"
+	"\![*]\q[良い学習リソースを知っていますか？,OnYukiResources]\n"
+	"\![*]\q[トークレートを変更する,OnTalkRateMenuJP]\n\n"
+	
+	"\![*]\q[やっぱりやめる,blank]"
+}
+
+OnTalkRateMenuJP : all
+{	
+	"\p[2]\_q"
+	//This is just setting up a label, you may need to add to it or tweak it if you change what rates are available
+	_talkrate = "オフ"
+	if aitalkinterval == 30; _talkrate = "30秒"
+	elseif aitalkinterval == 60; _talkrate = "1分"
+	elseif aitalkinterval == 180; _talkrate = "3分"
+	elseif aitalkinterval == 300; _talkrate = "5分"
+	elseif aitalkinterval == 600; _talkrate = "10分"
+	
+	"\1\b2\![set,autoscroll,disable]\_q"
+	"Current interval: %(_talkrate)\n\n"
+	
+	"\![*]\q[オフ,OnTalkRateChange,0]\n"
+	"\![*]\q[30秒,OnTalkRateChange,30]\n"
+	"\![*]\q[1分,OnTalkRateChange,60]\n"
+	"\![*]\q[3分,OnTalkRateChange,180]\n"
+	"\![*]\q[5分,OnTalkRateChange,300]\n"
+	"\![*]\q[10分,OnTalkRateChange,600]\n"
+	"\n"
+	"\![*]\q[戻る,OnKeroMenu]  \![*]\q[やっぱりやめる,blank]"
+}
+
+OnYukiResources : all
+{
+	"\1\s[10]\b[2]\![set,autoscroll,disable]\_q"
+	"おお！英語を学ぶための初心者向けリソースをいくつか紹介するね"
+	"\n日本語を学ぶためのリソースが必要なら、オリバーさんがきっと助けてくれるよ！"
+	"\n\n"
+	"\![*]これはとても役に立つ日英辞書です。\n \_a[https://jisho.org]Jisho Dictionary\_a\n"
+	"\![*]ここにいくつかの無料で子供向けの本が見つかるサイトがあります。学習にとても役立ちますよ！\n \_a[https://www.uniteforliteracy.com/]Unite for Literacy\_a  \_a[https://www.storyberries.com/]Story Berries\_a   \_a[https://www.freechildrenstories.com]Free Children's Stories\_a"
+	"\n"
+	"\![*]\q[戻る,OnKeroMenu]  \![*]\q[やっぱりやめる,blank]"
+}
+
+OnYukiMusic : all
+{
+	"\1\s[10]\b[2]\![set,autoscroll,disable]\_q"
+	"もちろん、私が歌った音楽アーティストをいくつか紹介できるよ！"
+	"\n"
+	"\_a[https://www.youtube.com/@yukopi_]ゆこぴ\_a\n"
+	"\_a[https://www.youtube.com/@inabakumori]稲葉曇\_a\n"
+	"\_a[https://www.nicovideo.jp/user/29049122]想太\_a\n"
+	"\_a[https://www.youtube.com/@LUVRZ]LUVRZ\_a - 英語のアーティスト 1 Original\n"
+	"\n"
+	"\![*]\q[戻る,OnKeroMenu]  \![*]\q[やっぱりやめる,blank]"
+}

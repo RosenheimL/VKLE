@@ -1,0 +1,72 @@
+OnAiTalk
+{
+	if CHAIN.IDName == ""
+	{
+		LastTalk = RandomTalk
+	}
+	else
+	{
+		LastTalk = ChainTalk
+	}
+	LastTalk
+}
+
+RandomTalk : nonoverlap_pool
+{
+/* 
+	 The Vast majority here Written by idk 
+	 Japanese Translations done by Rosenheim (with a lot of help from Google Translate lol)	
+*/
+	"\1\s[15]オリーくん!! これ見て、%(objJP)見つけたよ。\n\n\0\w8\w8\w8 Where is it?\w8\n\1\s[12]えー?! \s[11]待って、どこに行ったの？..."
+    "\1\s[15]ねぇ~オリーくん! \w8これ見て、%(objJP)見つけたよ。見たいですか？\w8\n\0\s[0]Maybe in a minute."
+    "\1\s[15]これ見て、鉛筆見たいですか？ 可愛いし、キラキラしてます.\w8\n\0\s[0]No thank you." 
+    "\1\s[15]あたしのクレヨンで一緒に絵を描きたいですか？\w8\n\0\s[0]Maybe next time."
+    "\1\s[15]紙でコンフェティを作ろうか？あたしははさみを持ってるよ！\w8\n\0\s[6]I don't know if you're even old enough to use those...\w8\n\1\s[17]ちゃんと使えるよ！"
+    "\0\s[0]Yuki?\w8\n\1\s[10]?\w8\n\0\s[25]Have you ever wondered how a computer works?\w8\n\1\s[35]ふむ.\w8.\w8.\w8 \s[5]魔法かもしれませんか？\w8\n\0\s[8]Somehow I doubt that..."
+	"\1\s[10]どうして顔に絆創膏を貼っているの？\n\0\s[3]Ah, that... I'd rather not talk about that..."
+	"\1\s[15]オリバーくん\n\0\s[0]What is it?\n\1\s[10]\nバンテージをどうやって付けたの？\n\0\s[4]For the last time, I don't know…\1\s[16]\nうーん..."
+	"\1\s[15]ねえ 、オリーくん！\w8\s[10]キヨテル先生を知ってる？\n\0\s[6]Kiyoteru... \s[5]He's your teacher, right?\n\1\n\s[15]うん！"
+	"\1\s[13]\w8\w8\0\s[0]something wrong Yuki?\1\s[17]この英語の宿題、難しすぎるよ！全然わかんない！\n\0\s[6]...I can walk you through it if you want.\n\1\s[15]マジ？やったー、ありがとう、オリーくん！"
+	"\1\s[10]キヨテル先生は学校を出た後、何をしているのかな。\w8オリくんはどう思う？\w8\n\0\s[8]You don't think he just goes home every day?\w8\n\1\s[15]夜に行く秘密の場所があるって聞いたよ。\w8\n\0\s[0]That sounds ridiculous."
+	"\0\s[5]How was school today, Yuki?\w8\n\1\s[15]学校は楽しかったよ！\w8清照先生がいるといつも楽しい！"
+	"\1\s[15]学校が大好き！ \w8とても楽しい~\w8\n\0\s[4]I don't think there is much to do at school besides learn stuff.\n\1\s[35]うん、勉強は楽しいね"
+	"\1\s[15]キヨテル先生教えるがとても上手です!\w8彼のクラスに参加できて嬉しいです!"
+	"\1\s[15]オリーくん?一日はどうでしたか？\w8\n\0\s[0]How was my day? \w8It's okay. \s[5]I saw a cat earlier, and-\s[2]\n\1\s[12]猫?!?! \w8にゃんちゃん大好き!\w8とても愛いいいい〜〜"
+	"\0\s[5]Anything cool happened yet, Yuki?\w8\n\1\s[15]おお!今日、可愛いワンちゃんを見ました! \w8とても楽しがワンちゃん!\w8飼い主は私に彼を撫でさせてくれました。\w8\n\0\s[2]Wow... that does sound really cool."
+	"\0\s[25]Have you ever wondered why trees lose their leaves in the winter, Yuki?\w8\n\1\s[10]そうでもないよ, \s[13]寒くなるのがもっと心配！"
+    "\0\s[0]Have you noticed... \s[25]um.\w8.\w8.\w8\w8\n\1\s[10]え？何が？\w8\n\0\s[6]Nevermind."
+    "\1\s[15]ねえ、オリーくん、今日何する？\w8\n\0\s[0]I don't know..."
+	"\1\s[15]ねえ、オリーくん、今日何する？\w8\n\0\s[0]not sure, do you have any ideas?\n%(行)"
+}
+
+objJP
+{
+    "ノート"
+    "鉛筆" 
+    "消しゴム"
+    "ペン" 
+    "ルーズリーフ" 
+    "教科書"
+    "バインダー" 
+    "ファイル"
+    "ノートパソコン"
+    "ノートパッド"
+    "マーカー"
+    "テキストブック" 
+    "ホワイトボード" 
+    "ライティングツール"
+    "シャープナー"
+    "文房具セット" 
+    "ノートバック"
+    "ペンケース"
+    "色鉛筆"
+    "レポートカバー" 
+}
+
+行
+{
+	"\1\s[15]公園に行って!\w8\n\0\s[5]Okay, sure. I'll go with you later.\w8\n\1\s[15]ブランコ、私が先に言います！"
+    "\1\s[15]図書館に行って! \w8\n\0\s[0]If we go, you have to promise you'll be quiet. \w8We can't get in trouble.\w8\n\1\s[15]静かにするよ!!! 静かにするよ!!!\w8\n\0\s[7]Okay! Shush!"
+    "\1\s[15]お菓子屋に行って!\w8\n\0\s[6]Do you even have any money for candy?\w8\n\1\s[12]えっ?! それ、お金かかるって知らなかった..."
+	"\1\s[15]行きたい場所が...\w8 ある...\w8 えと...\w8 \w8\s[35]...\w8\n\0\s[0]Where?\w8\n\1\s[11]え... 忘れた!"
+}

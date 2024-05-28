@@ -1,6 +1,3 @@
-# VKLE
- Ukagaka that fills me with Learning
-
 The Vocaloid Kid's Language Exchange
 --GhostJam2024 Release--
 Thank You For Downloading The The VKLE Ghost!

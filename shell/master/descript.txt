@@ -1,0 +1,13 @@
+charset,UTF-8
+type,shell
+
+name,Oli and Yuki
+craftman,Blue
+craftmanw,Blue
+craftmanurl,https://blue0909.tumblr.com/
+
+seriko.use_self_alpha,1
+seriko.alignmenttodesktop,free
+
+sakura.name,Oliver
+kero.name,Yuki
