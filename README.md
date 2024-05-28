@@ -1,6 +1,10 @@
 # VKLE
  Ukagaka that fills me with Learning
 
+If You've Landed Here and never used an Ukagaka Before. You'll need Baseware to run this program. That Baseware can be found @ https://ssp.shillest.net/
+If you need Help then Check out either the Ukagaka DreamTeam server Linked below or My Discord 
+https://discord.gg/47NRGWNXFH
+
 The Vocaloid Kid's Language Exchange
 --GhostJam2024 Release--
 Thank You For Downloading The The VKLE Ghost!
